@@ -1,0 +1,12 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Login from "../pages/Login";
+
+const { Navigator, Screen } = createNativeStackNavigator();
+
+export const AuthRoutes = () => {
+  return (
+    <Navigator initialRouteName="SignIn">
+      <Screen name="SignIn" component={Login} />
+    </Navigator>
+  )
+};
