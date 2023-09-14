@@ -1,9 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: {
-    justifyContent: "center",
-  },
+  container: {},
   containerImage: {
     width: "100%",
     backgroundColor: "red",

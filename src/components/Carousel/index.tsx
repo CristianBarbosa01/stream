@@ -5,7 +5,12 @@ import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
 const Carousel = () => {
-  const arrayFilm = [1, 2, 3]
+  const arrayFilm = [
+    { image: 'https://cinepop.com.br/wp-content/uploads/2023/05/missaoimpossivel7_2.jpg' },
+    { image: 'https://cinepop.com.br/wp-content/uploads/2023/05/missaoimpossivel7_2.jpg' },
+    { image: 'https://cinepop.com.br/wp-content/uploads/2023/05/missaoimpossivel7_2.jpg' },
+  ]
+
   const { navigate }: any = useNavigation()
   return (
     <View>
@@ -15,10 +20,13 @@ const Carousel = () => {
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {
-          arrayFilm.map((item) => {
+          arrayFilm.map((item, index) => {
             return (
-              <TouchableOpacity onPress={() => navigate('DetailsMovie')} key={item}>
-                <FilmCard />
+              <TouchableOpacity
+                onPress={() => navigate('DetailsMovie', { source: item.image })}
+                key={index}
+              >
+                <FilmCard source={item.image} />
               </TouchableOpacity>
             )
           })

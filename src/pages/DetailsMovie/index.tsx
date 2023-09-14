@@ -1,14 +1,17 @@
 import { View } from "react-native";
 import { ImageDetail } from "../../components/ImageDetail";
 import { styles } from "./styles";
+import ViewContainer from "../../components/ViewContainer";
 
-const DetailsMovie = () => {
+const DetailsMovie = ({route}) => {
+  const image = route?.params?.source || null;
+
   return (
-    <View style={styles.container}>
-    <ImageDetail mode="cover" source="https://i.pinimg.com/originals/4b/56/7b/4b567b59155bf6fdb9984b0a5a0c53c9.jpg" />
+    <ViewContainer style={styles.container}>
+      <ImageDetail mode="cover" source={image} />
 
-    <View></View>
-  </View>
+      <View></View>
+    </ViewContainer>
   )
 }
 

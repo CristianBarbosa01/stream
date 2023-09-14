@@ -1,12 +1,10 @@
-import { Text } from "react-native";
 import ViewContainer from "../../components/ViewContainer";
 
-const Login = () => {
+const Profile = () => {
   return (
     <ViewContainer>
-      <Text> entrou aqui</Text>
     </ViewContainer>
   )
 }
 
-export default Login;
+export default Profile;
