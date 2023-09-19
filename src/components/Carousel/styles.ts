@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import theme from "../../theme";
 
 export const styles = StyleSheet.create({
   titleContainer: {
@@ -11,6 +12,6 @@ export const styles = StyleSheet.create({
     color: '#fff'
   },
   viewAll: {
-     color: '#fff'
+     color: theme.tint
   },
 });

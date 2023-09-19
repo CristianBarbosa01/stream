@@ -3,6 +3,7 @@ import { styles } from "./styles";
 import FilmCard from "../FilmCard";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
+import React from "react";
 
 const Carousel = () => {
   const arrayFilm = [

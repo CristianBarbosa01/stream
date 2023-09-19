@@ -17,4 +17,10 @@ export const styles = StyleSheet.create({
     height: 1,
     width: "80%",
   },
+  containerBack : {
+    position: "absolute",
+    top: 20,
+    left: 20,
+    zIndex: 5,
+  }
 });
